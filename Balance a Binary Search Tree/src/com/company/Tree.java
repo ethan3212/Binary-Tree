@@ -124,19 +124,19 @@ public class Tree {
     }
 
     public void traverse(int traverseType) {
-        switch(traverseType) {
-            case 1:
+        switch (traverseType) {
+            case 1 -> {
                 System.out.print("\nPreorder traversal: ");
                 preOrder(root);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 System.out.println("\nInorder traversal: ");
                 inOrder(root);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 System.out.println("\nPostorder traversal: ");
                 postOrder(root);
-                break;
+            }
         }
         System.out.println();
     }
@@ -166,13 +166,13 @@ public class Tree {
     }
 
     public void displayTree() {
-        Stack<Node> globalStack = new Stack<Node>();
+        Stack<Node> globalStack = new Stack<>();
         globalStack.push(root);
         int nBlanks = 32;
         boolean isRowEmpty = false;
         System.out.println("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _");
         while(!isRowEmpty) {
-            Stack<Node> localStack = new Stack<Node>();
+            Stack<Node> localStack = new Stack<>();
             isRowEmpty = true;
             for(int j=0; j<nBlanks; j++)
                 System.out.print(" ");
