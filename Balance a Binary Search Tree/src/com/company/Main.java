@@ -9,12 +9,12 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Random random = new Random();
         Tree theTree = new Tree();
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             int number = random.nextInt(10);
             theTree.insert(number);
         }
         int value;
-        while(true) {
+        while (true) {
             System.out.print("Enter first letter of show, ");
             System.out.print("insert, find, delete, or traverse: ");
             int choice = getChar();
@@ -44,7 +44,7 @@ public class Main {
                     System.out.print("Enter value to delete: ");
                     value = getInt();
                     boolean didDelete = theTree.delete(value);
-                    if(didDelete) {
+                    if (didDelete) {
                         System.out.print("Deleted " + value + "\n");
                     } else {
                         System.out.print("Could not delete ");
